@@ -1,5 +1,6 @@
 ﻿using CompanyClaimsApi.Data;
 using CompanyClaimsApi.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace CompanyClaimsApi.Features.Companies.Repositories
 {
@@ -12,7 +13,7 @@ namespace CompanyClaimsApi.Features.Companies.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<Company> GetCompanyAsync(int companyId)
+        public async Task<Company?> GetCompanyAsync(int companyId)
         {
             return await _dbContext.Companies.FindAsync(companyId);
         }

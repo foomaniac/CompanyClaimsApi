@@ -4,6 +4,6 @@ namespace CompanyClaimsApi.Features.Companies.Services
 {
     public interface ICompanyService
     {
-        Task<CompanyDto> GetCompanyAsync(int companyId);
+        Task<CompanyDto?> GetCompanyAsync(int companyId);
     }
 }

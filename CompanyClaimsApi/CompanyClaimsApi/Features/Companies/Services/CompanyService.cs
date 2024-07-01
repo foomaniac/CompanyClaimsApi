@@ -15,17 +15,17 @@ namespace CompanyClaimsApi.Features.Companies.Services
             _logger = logger;
         }
 
-        public async Task<CompanyDto> GetCompanyAsync(int companyId)
+        public async Task<CompanyDto?> GetCompanyAsync(int companyId)
         {
-            Company company = await _companyRepository.GetCompanyAsync(companyId);
+            Company? company = await _companyRepository.GetCompanyAsync(companyId);
 
-            if (company == null)
+            if (company is null)
             {
-                _logger.LogWarning($"Company with id {companyId} not found");
+                _logger.LogError($"Company with id {companyId} not found");
                 return null;
             }
 
-            //TODO: Implement mapper solution
+            //TODO:// Implement mapper solution
             CompanyDto companyDto = new CompanyDto()
             {
                 Active = company.Active,
@@ -37,7 +37,7 @@ namespace CompanyClaimsApi.Features.Companies.Services
                 InsuranceEndDate = company.InsuranceEndDate,
                 Name = company.Name,
                 Postcode = company.Postcode,
-                HasActivePolicy = company.InsuranceEndDate > DateTime.UtcNow
+                HasActivePolicy = company.InsuranceEndDate.Date > DateTime.UtcNow.Date
             };
 
             return companyDto;

@@ -4,15 +4,15 @@ namespace CompanyClaimsApi.Features.Companies.Dtos
 {
     public class CompanyDto
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Address1 { get; set; }
-        public string Address2 { get; set; }
-        public string Address3 { get; set; }
-        public string Postcode { get; set; }
-        public string Country { get; set; }
-        public bool Active { get; set; }
-        public DateTime InsuranceEndDate { get; set; }
-        public bool HasActivePolicy { get; set; }
+        public int Id { get; init; }
+        public string Name { get; init; }
+        public string Address1 { get; init; }
+        public string Address2 { get; init; }
+        public string Address3 { get; init; }
+        public string Postcode { get; init; }
+        public string Country { get; init; }
+        public bool Active { get; init; }
+        public DateTime InsuranceEndDate { get; init; }
+        public bool HasActivePolicy { get; init; }
     }
 }

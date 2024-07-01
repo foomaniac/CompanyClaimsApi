@@ -1,8 +1,12 @@
-﻿namespace CompanyClaimsApi.Data.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CompanyClaimsApi.Data.Entities
 {
     public class Claim
     {
+        [Key]
         public string UCR { get; set; }
+
         public int CompanyId { get; set; }
         public DateTime ClaimDate { get; set; }
         public DateTime LossDate { get; set; }
