@@ -7,18 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Claims\Data\" />
-    <Folder Include="Features\Claims\Dtos\" />
     <Folder Include="Features\Claims\Controllers\" />
     <Folder Include="Features\Claims\Services\" />
-    <Folder Include="Features\Companies\Data\" />
-    <Folder Include="Features\Companies\Dtos\" />
     <Folder Include="Features\Companies\Controllers\" />
-    <Folder Include="Features\Companies\Services\" />
   </ItemGroup>
 
 </Project>
