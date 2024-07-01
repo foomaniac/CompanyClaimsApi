@@ -7,8 +7,8 @@ namespace CompanyClaimsApi.Features.Claims.Services
 {
     public class ClaimsService : IClaimsService
     {
-        private IClaimsRepository _claimsRepository;
-        private ILogger<ClaimsService> _logger;
+        private readonly IClaimsRepository _claimsRepository;
+        private readonly ILogger<ClaimsService> _logger;
 
         public ClaimsService(IClaimsRepository claimsRepository, ILogger<ClaimsService> logger)
         {

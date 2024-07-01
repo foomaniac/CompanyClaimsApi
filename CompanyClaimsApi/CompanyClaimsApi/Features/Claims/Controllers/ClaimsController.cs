@@ -9,7 +9,7 @@ namespace CompanyClaimsApi.Features.Claims.Controllers
     [ApiController]
     public class ClaimsController : ControllerBase
     {
-        private IClaimsService _claimsService;
+        private readonly IClaimsService _claimsService;
 
         public ClaimsController(IClaimsService claimsService)
         {

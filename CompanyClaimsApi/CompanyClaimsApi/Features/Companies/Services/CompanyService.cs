@@ -6,8 +6,8 @@ namespace CompanyClaimsApi.Features.Companies.Services
 {
     public class CompanyService : ICompanyService
     {
-        private ICompanyRepository _companyRepository;
-        private ILogger<CompanyService> _logger;
+        private readonly ICompanyRepository _companyRepository;
+        private readonly ILogger<CompanyService> _logger;
 
         public CompanyService(ICompanyRepository companyRepository, ILogger<CompanyService> logger)
         {
