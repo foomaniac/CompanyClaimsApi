@@ -9,9 +9,9 @@ namespace CompanyClaimsApi.Features.Claims.Controllers
     [ApiController]
     public class ClaimsController : ControllerBase
     {
-        private ClaimsService _claimsService;
+        private IClaimsService _claimsService;
 
-        public ClaimsController(ClaimsService claimsService)
+        public ClaimsController(IClaimsService claimsService)
         {
             _claimsService = claimsService;
         }
