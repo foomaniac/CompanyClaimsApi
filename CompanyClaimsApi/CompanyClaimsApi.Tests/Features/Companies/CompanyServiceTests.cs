@@ -52,13 +52,13 @@ namespace CompanyClaimsApi.Tests.Features.Companies
             // Arrange
             var mockRepository = Substitute.For<ICompanyRepository>();
             var testCompanyId = 1;
-            var futureDate = DateTime.Now.AddDays(-30); // InsuranceEndDate 30 days in the future
+            var dateInPast = DateTime.Now.AddDays(-30); // InsuranceEndDate 30 days ago
 
             mockRepository.GetCompanyAsync(testCompanyId)
                 .Returns(Task.FromResult(new Company
                 {
                     Id = testCompanyId,
-                    InsuranceEndDate = futureDate,
+                    InsuranceEndDate = dateInPast,
                     Name = "Test CompanyDto 2",
                     Address1 = "222 Test Street",
                     Address2 = "Testville",
