@@ -34,7 +34,7 @@ namespace CompanyClaimsApi.Features.Companies.Controllers
         }
 
         [HttpGet("{companyId}/claims")]
-        public async Task<ActionResult<IEnumerable<ClaimDto>>> GetClaimsForCompanyAsync(int companyId)
+        public async Task<ActionResult<List<ClaimDto>>> GetClaimsForCompanyAsync(int companyId)
         {
             var claims = await _claimService.GetClaimsForCompanyAsync(companyId);
 

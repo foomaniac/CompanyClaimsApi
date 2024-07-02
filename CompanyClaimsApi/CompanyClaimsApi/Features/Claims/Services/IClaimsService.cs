@@ -7,5 +7,7 @@ namespace CompanyClaimsApi.Features.Claims.Services
         Task<ClaimDto?> GetClaimByUcrAsync(string uniqueClaimReference);
 
         Task<List<ClaimDto>> GetClaimsForCompanyAsync(int companyId);
+
+        Task<ClaimDto?> UpdateClaimAsync(ClaimDto claim);
     }
 }

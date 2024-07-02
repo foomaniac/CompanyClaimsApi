@@ -28,5 +28,23 @@ namespace CompanyClaimsApi.Features.Claims.Controllers
 
             return Ok(claim);
         }
+
+        [HttpPut("{uniqueClaimReference}")]
+        public async Task<IActionResult> UpdateClaim(string uniqueClaimReference, [FromBody] ClaimDto claimDto)
+        {
+            if (uniqueClaimReference != claimDto.UCR)
+            {
+                return BadRequest("UCR mismatch between uri and input payload");
+            }
+
+            var updatedClaim = await _claimsService.UpdateClaimAsync(claimDto);
+
+            if (updatedClaim == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(updatedClaim);
+        }
     }
 }
