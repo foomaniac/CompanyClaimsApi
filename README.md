@@ -20,9 +20,9 @@ The data layer sits within the 'data' folder at the root of the solution.
 
 ## Getting Started
 
-The solution does not have a persistance layer fully implemented, therefore sample data is created via an EF dbcontext whent he solution starts up, using an InMemory database. Therefore you can simply open the solution and hit debug to run it locally.
+The solution does not have a persistance layer fully implemented, therefore sample data is created via an EF dbcontext when the solution starts up, using an InMemory database. Therefore you can simply open the solution and hit debug to run it locally.
 
-A sample company id's for reference are 1,2 & 3. You get then view claims, get claim information and also update a claim as required.
+Sample company id's for reference are 1,2 & 3. You can then view claims, get claim information and also update a claim as required.
 
 
 
